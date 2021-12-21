@@ -13,7 +13,7 @@ function achievement(title, content, index) {
     if(!title || !content) {
         throw Error ("Title or content has not been provided");
     } else if(index <= 0 || index >= 40) {
-        throw Error ("The index has to be from 1 to 39");
+        throw Error ("The index hةas to be from 1 to 39");
     } else {
         if(!index) index = Math.floor(Math.random() * 39)
         title = title.replace(" ", "+")
@@ -139,9 +139,11 @@ async function skin(name) {
  * @returns Object
 */
 
-async function server(ip) {
+async function server(ip, ed) {
     if(!ip) throw Error('A minecraft ip server has not been provided');
-    const api = await axios.get(`https://api.mcsrvstat.us/2/${ip}`)
+    const api;
+    if(ed === "pe") api = await axios.get(`https://api.mcsrvstat.us/bedrock/2/${ip}`)
+    if(!ed || ed === 'pc') api = await axios.get(`https://api.mcsrvstat.us/2/${ip}`)
     const data = api.data;
     return {
         serverIcon: `https://api.mcsrvstat.us/icon/${ip.toLowerCase()}`,
