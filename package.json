@@ -7,10 +7,10 @@
     "test": "node examples/test.js"
   },
   "keywords": [ "minecraft", "information", "minecraft-information", "discord.js", "javascript", "minecraft-info", "info-minecraft" ],
-  "homepage": "https://github.com/LilBartrap999/minecraft-information#readme",
-  "repository": {"hthttps://github.com/LilBartrap999/minecraft-information#readme",
+  "homepage": "https://github.com/SomeoneThatForkAnythingHeNeeds/minecraft#readme",
+  "repository": {"https://github.com/SomeoneThatForkAnythingHeNeeds/minecraft#readme",
     "type": "git",
-    "url": "git+https://github.com/LilBartrap999/minecraft-information.git"
+    "url": "git+https://github.com/SomeoneThatForkAnythingHeNeeds/minecraft.git"
   },
   "bugs": {
     "url": "https://github.com/LilBartrap999/minecraft-information/issues",
