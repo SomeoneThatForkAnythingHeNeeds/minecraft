@@ -139,9 +139,11 @@ async function skin(name) {
  * @returns Object
 */
 
-async function server(ip) {
+async function server(ip, ed) {
     if(!ip) throw Error('A minecraft ip server has not been provided');
-    const api = await axios.get(`https://api.mcsrvstat.us/2/${ip}`)
+    const api
+    if(ed !== 'pe') api = await axios.get(`https://api.mcsrvstat.us/2/${ip}`)
+    if(ed === 'pe') api = await axios.get(`https://api.mcsrvstat.us/bedrock/2/${ip}`)
     const data = api.data;
     return {
         serverIcon: `https://api.mcsrvstat.us/icon/${ip.toLowerCase()}`,
